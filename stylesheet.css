@@ -1,0 +1,290 @@
+body{
+    margin: 0;
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    z-index: -1;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+li{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    object-fit: cover;
+    margin: auto;
+}
+
+h1{
+    font-size: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0 20px;
+    color: #fff;
+     text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px rgb(254, 163, 5),
+    0 0 82px rgb(254, 163, 5),
+    0 0 92px rgb(254, 163, 5),
+    0 0 102px rgb(254, 163, 5),
+    0 0 151px rgb(254, 163, 5);
+}
+
+.mainvisual h1 span{
+    color: orange;
+}
+
+h2{
+    font-size: 60px;
+    font-weight: bold;
+    padding: 70px;
+    color: white;
+}
+
+h2::after{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 40px;
+    background-color: white;
+    margin-left: 20px;
+    vertical-align: baseline;
+}
+
+h3{
+    text-align: center;
+    font-size: 50px;
+}
+
+h5{
+    text-align: center;
+    font-size: 30px;
+}
+
+dl{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 50px auto 200px auto;
+}
+
+dd{
+    width: 30%;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+dt{
+    width: 70%;
+    margin-left: 0;
+    margin-bottom: 20px;
+}
+
+main p{
+    text-align: center;
+}
+
+.container{
+    max-width: 1000px;
+    padding: 0 20px;
+    margin: auto;
+}
+
+
+
+
+
+.mainvisual{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    position: relative;
+    margin: auto;
+    animation-name: rising;
+    animation-duration: 6s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes rising{
+    0% {
+        opacity: 0;
+    }    
+    100%{
+        opacity: 1;
+    }
+}
+
+.mainvisual img{
+    height: 100%;
+}
+
+.mainvisual::after{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 0 40px 40px #f3f3f3;
+}
+
+.message{
+    text-align: center;
+    font-size: 40px;
+    margin: 300px 0 125px 0;
+}
+
+.direction{
+    font-size: 40px;
+    margin-bottom: 250px;
+    animation-name: up-down;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: inherit;
+}
+
+@keyframes up-down{
+    0% {
+        transform: translateY(0);
+    }    
+    100%{
+        transform: translateY(40px);
+    }
+}
+
+
+
+.about{
+    max-width: 100%;
+    background-image: url(IMG_3308.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#top-img{
+    width: 350px;
+    height: 467px;
+    margin: 0 auto 30px auto;
+    border-radius: 20px;
+}
+
+#next-button{
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    margin: auto
+}
+
+#next-button:hover{
+    opacity: 0.7;
+}
+
+.education dl{
+    align-items: center;
+}
+
+
+
+
+
+.snowboard video{
+    max-width: 660px;
+    max-height: 400px;
+    margin: 50px auto 0 auto;
+    display: block;
+}
+
+
+
+
+.works{
+    margin-top: 250px;
+}
+
+.works p{
+    margin: 60px 0 60px 0;
+}
+
+.works-title{
+    max-width: 100%;
+    background-image: url(IMG_1097.JPG);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+footer{
+    background-color: black;
+    color: #f3f3f3;
+}
+
+footer p{
+    margin: 0;
+    padding: 15px 0 15px 20px;
+}
+
+footer a{
+    color: #f3f3f3;
+}
+
+
+
+
+
+@media screen and (max-width:699px){
+    .snowboard video{
+        width: 450px;
+    }
+
+    .mainvisual h1{
+        font-size: 100px;
+    }
+}
+
+@media screen and (max-width:489px){
+    .snowboard video{
+        width: 280px;
+    }
+
+    .mainvisual h1{
+        font-size: 70px;
+    }
+
+    #top-img{
+        width: 280px;
+        height: 372px;
+    }
+
+    h3{
+        font-size: 35px;
+    }
+
+    .about , .works-title{
+        background-attachment: scroll;
+    }
+}
